@@ -1,4 +1,3 @@
-console.clear();
 var loginForm = document.getElementById("loginForm");
 var regForm = document.getElementById("regForm");
 var loginDiv = document.getElementById("loginDiv");
