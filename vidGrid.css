@@ -99,3 +99,20 @@ a {
     transform: rotate(360deg);
   }
 }
+@media (max-width: 700px) {
+  a {
+    width: 80%;
+  }
+  #main-heading {
+    font-size: 24px;
+    text-shadow: 1px 2px #2b3252;
+  }
+  #topbar button {
+    margin-right: 10px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid black;
+  }
+}
