@@ -1,0 +1,101 @@
+html {
+  scroll-behavior: smooth;
+}
+#topbar {
+  width: 100%;
+  background-color: #56a5eb;
+  padding: 20px 0;
+  margin-bottom: 60px;
+}
+#topbar button {
+  margin-right: 40px;
+  cursor: pointer;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #fad744;
+  font-size: 20px;
+  font-weight: 700;
+  outline: none;
+  border: 2px solid black;
+  position: absolute;
+  right: 0;
+}
+#topbar button:hover {
+  color: white;
+  background-color: #56a5eb;
+  border-color: #fad744;
+}
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: rgb(225, 243, 248);
+}
+
+#main-heading {
+  font-family: "Caveat Brush", cursive;
+  font-size: 40px;
+  text-align: center;
+  color: #fad744;
+  text-shadow: 2px 5px #2b3252;
+  text-align: center;
+  margin: 0;
+}
+
+#main-container {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+  width: 30%;
+  margin: auto;
+}
+#playlist-wrapper {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.playlist-card {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.active-card {
+  border: 4px solid #fad744;
+}
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+#loader {
+  border: 26px solid white;
+  border-radius: 50%;
+  border-top: 1.6rem solid #56a5eb;
+  width: 100px;
+  height: 100px;
+  animation: spin 1.5s linear infinite;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
