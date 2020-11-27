@@ -31,7 +31,7 @@ loginForm.onsubmit = function (e) {
         loginCredentials[i].uname == this.username.value &&
         loginCredentials[i].password == this.password.value
       ) {
-        window.location.assign("../vidGrid.html");
+        window.location.assign("./vidGrid.html");
       } else {
         alert("please enter correct credentials!!");
       }
@@ -62,7 +62,7 @@ credentialCreation = function (uname, password) {
       }
     }
     if (status != "red") {
-      window.location.assign("../vidGrid.html");
+      window.location.assign("./vidGrid.html");
       loginCredentials.push(msgObj);
       window.localStorage.setItem(
         "credentials",
@@ -70,7 +70,7 @@ credentialCreation = function (uname, password) {
       );
     }
   } else {
-    window.location.assign("../vidGrid.html");
+    window.location.assign("./vidGrid.html");
     loginCredentials.push(msgObj);
     window.localStorage.setItem(
       "credentials",
