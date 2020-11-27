@@ -23,9 +23,14 @@ regForm.onsubmit = function (e) {
 };
 loginForm.onsubmit = function (e) {
   e.preventDefault();
-  for (var i = 0; i < loginCredentials.length; i++) {
-    if (loginCredentials[i].uname == this.username.value) {
-      if (loginCredentials[i].password == this.password.value) {
+  if (loginCredentials == 0) {
+    alert("U didn't have account please register..");
+  } else {
+    for (var i = 0; i < loginCredentials.length; i++) {
+      if (
+        loginCredentials[i].uname == this.username.value &&
+        loginCredentials[i].password == this.password.value
+      ) {
         window.location.assign("./vidGrid.html");
       } else {
         alert("please enter correct credentials!!");
@@ -47,15 +52,24 @@ credentialCreation = function (uname, password) {
     password: password,
   };
   var status = "red";
-  for (var i = 0; i < loginCredentials.length; i++) {
-    if (loginCredentials[i].uname == msgObj.uname) {
-      status = "red";
-      alert("User already exists!!");
-    } else {
-      status = "green";
+  if (loginCredentials.length != 0) {
+    for (var i = 0; i < loginCredentials.length; i++) {
+      if (loginCredentials[i].uname == msgObj.uname) {
+        status = "red";
+        alert("User already exists!!");
+      } else {
+        status = "green";
+      }
     }
-  }
-  if (status != "red") {
+    if (status != "red") {
+      window.location.assign("./vidGrid.html");
+      loginCredentials.push(msgObj);
+      window.localStorage.setItem(
+        "credentials",
+        JSON.stringify(loginCredentials)
+      );
+    }
+  } else {
     window.location.assign("./vidGrid.html");
     loginCredentials.push(msgObj);
     window.localStorage.setItem(
