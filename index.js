@@ -26,7 +26,7 @@ loginForm.onsubmit = function (e) {
   for (var i = 0; i < loginCredentials.length; i++) {
     if (loginCredentials[i].uname == this.username.value) {
       if (loginCredentials[i].password == this.password.value) {
-        window.location.assign("./vidGrid.html");
+        window.location.assign("../vidGrid.html");
       } else {
         alert("please enter correct credentials!!");
       }
@@ -56,7 +56,7 @@ credentialCreation = function (uname, password) {
     }
   }
   if (status != "red") {
-    window.location.assign("./vidGrid.html");
+    window.location.assign("../vidGrid.html");
     loginCredentials.push(msgObj);
     window.localStorage.setItem(
       "credentials",
